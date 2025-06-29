@@ -1,13 +1,13 @@
 export const testimonials = [
     {
-      name: "Aarav & Priya",
+      name: "Priya",
       image: "https://picsum.photos/seed/aaravpriya/400/400",
-      description: "We couldn't have asked for a better photographer! Every emotion, every laugh, and every tear was beautifully captured. These memories will last us a lifetime."
+      description: "The pictures turned out super dreamy and amazing just the way I wanted. I am glad to hire them."
     },
     {
-      name: "Rahul & Sneha",
+      name: "Deepanshu",
       image: "https://picsum.photos/seed/rahulsneha/400/400",
-      description: "Absolutely stunning work! From pre-wedding shoots to the final day, the professionalism and creativity were unmatched."
+      description: "I recently hired Vasundhara Studio for my Sister wedding and From the first interaction, they were professional, friendly, and really understood the kind of memories.The shoot was incredibly well-organized and fun. They made everyone feel comfortable in front of the camera, which truly shows in the natural and beautiful photos. The lighting, angles, and editing were top-notch-each image looks like a piece of art."
     },
     {
       name: "Karan & Isha",

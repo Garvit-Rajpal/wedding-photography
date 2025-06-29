@@ -117,8 +117,9 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-up">
             <img
-              src="Owner_image.DNG"
+              src="logo.jpeg"
               alt="Lead photographer"
+              loading='lazy'
               className="w-[10rem] h-[10rem] rounded-full mx-auto mb-8 shadow-lg"
             />
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-wedding-charcoal mb-6">

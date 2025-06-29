@@ -20,9 +20,9 @@ function AboutUsHero() {
         </div>
         <div className="animate-slide-in-right">
           <img
-            src="Owner_image.DNG"
+            src="about_us.jpeg"
             alt="Our photography team"
-            className="rounded-2xl w-[25rem] h-[25rem] shadow-2xl"
+            className="rounded-2xl max-w-full w-[25rem] max-h-full h-[25rem] object-cover shadow-2xl"
           />
         </div>
       </div>

@@ -78,7 +78,7 @@ const Contact = () => {
 
       {/* Contact Form Section */}
       <section className="py-20 bg-wedding-cream">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wedding-charcoal mb-6 animate-fade-up">
               Send Us a Message
@@ -88,7 +88,16 @@ const Contact = () => {
               We can't wait to hear about your special day!
             </p>
           </div>
-          <ContactForm />
+          <div className="flex items-center w-full">
+            <img 
+            className="hidden lg:block flex-1 w-[40%] h-[458px] rounded-l-2xl shadow-lg animate-fade-up"
+            src="https://res.cloudinary.com/dp289ksxm/image/upload/v1751213268/portfolio_8_yg37al.jpg"
+            alt="Contact Us"
+            />
+            <div className="flex-1">
+             <ContactForm />
+            </div>
+          </div>
         </div>
       </section>
 

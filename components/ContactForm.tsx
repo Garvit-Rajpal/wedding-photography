@@ -7,9 +7,11 @@ import { Label } from "@/components/ui/label";
 import { Send } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function ContactForm({ isHomePage = false }) {
   const { toast } = useToast();
+  const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -35,14 +37,15 @@ export default function ContactForm({ isHomePage = false }) {
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
   
     try {
+      // removing what's app for now since no. not available
       // ✅ 1. WhatsApp message
-      const waRes = await fetch("/api/send-wa", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const waData = await waRes.json();
-      if (!waRes.ok) throw new Error(waData?.error || "WhatsApp failed");
+      // const waRes = await fetch("/api/send-wa", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData),
+      // });
+      // const waData = await waRes.json();
+      // if (!waRes.ok) throw new Error(waData?.error || "WhatsApp failed");
   
       // ✅ 2. Email via EmailJS
       const emailResponse = await emailjs.send(
@@ -84,7 +87,7 @@ export default function ContactForm({ isHomePage = false }) {
   };
   return (
     <div className={`bg-wedding-cream py-20`}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={`${isHomePage?"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8":"w-full"}`}>
         
         {isHomePage && (
           <div className="text-center mb-12">
@@ -98,7 +101,7 @@ export default function ContactForm({ isHomePage = false }) {
           </div>
         )}
         
-        <div className="bg-white rounded-2xl shadow-xl p-8 animate-fade-up">
+        <div className={`bg-white ${isHomePage||isMobile?"rounded-2xl":"rounded-r-2xl"} shadow-xl p-8 animate-fade-up`}>
           <form onSubmit={handleEnquiry} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>

@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import { X } from "lucide-react";
 import Footer from "@/components/Footer";
-
+import {portfolioImages} from "@/data/portfolioGallery";
 function Portfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -86,7 +86,10 @@ function Portfolio() {
   return (
     <div className="min-h-screen ">
       <Navbar />
-      <section id="portfolio" className="py-20 bg-gradient-to-b from-wedding-cream to-white">
+      <section
+        id="portfolio"
+        className="py-20 bg-gradient-to-b from-wedding-cream to-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wedding-charcoal mb-6 animate-fade-up">
@@ -100,19 +103,37 @@ function Portfolio() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.map((image, index) => (
+            {portfolioImages.map((image, index) => (
+              // <div
+              //   key={image.id}
+              //   className="group relative overflow-hidden rounded-2xl cursor-pointer animate-zoom-in"
+              //   style={{ animationDelay: `${index * 100}ms` }}
+              //   onClick={() => setSelectedImage(image)}
+              // >
+              //   <img
+              //     src={image.src}
+              //     alt={image.alt}
+              //     className="w-full h-80 rounded-2xl object-contain transition-transform duration-700 group-hover:scale-110"
+              //   />
+              //   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              //     <span className="text-white font-medium text-lg">
+              //       View Image
+              //     </span>
+              //   </div>
+              // </div>
               <div
                 key={image.id}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer animate-zoom-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group relative overflow-hidden rounded-2xl cursor-pointer animate-zoom-in bg-white/100 flex items-center justify-center"
+                style={{ height: "20rem", animationDelay: `${index * 100}ms` }}
                 onClick={() => setSelectedImage(image)}
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain transition-all duration-500 group-hover:opacity-50 group-hover:scale-110 group-hover:cursor-pointer "
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/30 rounded-2xl">
                   <span className="text-white font-medium text-lg">
                     View Image
                   </span>

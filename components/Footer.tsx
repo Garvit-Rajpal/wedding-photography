@@ -1,24 +1,52 @@
 // components/Footer.tsx
 "use client";
 
-import { Heart, Mail, Phone, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
+import {
+  Heart,
+  Mail,
+  Phone,
+  Instagram,
+  Twitter,
+  Youtube,
+  Linkedin,
+} from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "Instagram", icon: Instagram, url: "https://instagram.com/eternalmomentsphoto", color: "hover:text-pink-500" },
-    { name: "Twitter", icon: Twitter, url: "https://twitter.com/eternalmomentsphoto", color: "hover:text-blue-400" },
-    { name: "Youtube", icon: Youtube, url: "https://youtube.com/@eternalmomentsphoto", color: "hover:text-red-500" },
-    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/company/eternal-moments-photography", color: "hover:text-blue-600" }
+    {
+      name: "Instagram",
+      icon: Instagram,
+      url: "https://instagram.com/eternalmomentsphoto",
+      color: "hover:text-pink-500",
+    },
+    {
+      name: "Twitter",
+      icon: Twitter,
+      url: "https://twitter.com/eternalmomentsphoto",
+      color: "hover:text-blue-400",
+    },
+    {
+      name: "Youtube",
+      icon: Youtube,
+      url: "https://youtube.com/@eternalmomentsphoto",
+      color: "hover:text-red-500",
+    },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      url: "https://linkedin.com/company/eternal-moments-photography",
+      color: "hover:text-blue-600",
+    },
   ];
 
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Portfolio", path: "/portfolio" },
-    { name: "Contact", path: "/contact" }
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -28,21 +56,35 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Heart className="h-8 w-8 text-wedding-gold" />
-              <span className="font-serif text-2xl font-bold">Vasundhara Studios</span>
+              <span className="font-serif text-2xl font-bold">
+                Vasundhara Studios
+              </span>
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Capturing your special moments with artistic wedding photography. We create timeless memories that you'll treasure forever.
+            <p className="text-gray-300 mb-6 text-left max-w-md">
+              At times, we may be traveling or fully engaged in documenting
+              life’s most elegant occasions.<br/><br/>
+              If you find us unreachable, please
+              connect with us on WhatsApp or email at
+              vasundharastudios8@gmail.com.<br/><br/>
+              We look forward to responding
+              promptly and curating memories that last a lifetime.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-wedding-gold" />
-                <a href="mailto:info@eternalmomentsphoto.com" className="text-gray-300 hover:text-wedding-gold transition-colors">
-                vasundharastudios8@gmail.com
+                <a
+                  href="mailto:info@eternalmomentsphoto.com"
+                  className="text-gray-300 hover:text-wedding-gold transition-colors"
+                >
+                  vasundharastudios8@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-wedding-gold" />
-                <a href="tel:+918279893922" className="text-gray-300 hover:text-wedding-gold transition-colors">
+                <a
+                  href="tel:+918279893922"
+                  className="text-gray-300 hover:text-wedding-gold transition-colors"
+                >
                   +91 82798 93922
                 </a>
               </div>
@@ -50,11 +92,16 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4 text-wedding-gold">Quick Links</h3>
+            <h3 className="font-serif text-lg font-semibold mb-4 text-wedding-gold">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path} className="text-gray-300 hover:text-wedding-gold transition-colors">
+                  <Link
+                    href={link.path}
+                    className="text-gray-300 hover:text-wedding-gold transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -63,7 +110,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4 text-wedding-gold">Follow Us</h3>
+            <h3 className="font-serif text-lg font-semibold mb-4 text-wedding-gold">
+              Follow Us
+            </h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -87,10 +136,16 @@ const Footer = () => {
               © {currentYear} Vasundhara Studios. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-300 hover:text-wedding-gold text-sm transition-colors">
+              <Link
+                href="#"
+                className="text-gray-300 hover:text-wedding-gold text-sm transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-300 hover:text-wedding-gold text-sm transition-colors">
+              <Link
+                href="#"
+                className="text-gray-300 hover:text-wedding-gold text-sm transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>

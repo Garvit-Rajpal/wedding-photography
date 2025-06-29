@@ -3,19 +3,13 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { galleryImages } from "@/data/portfolioGallery"; // Assuming you have a data file for the gallery images
 
 const PortfolioGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const router = useRouter();
 
-  const galleryImages = [
-    { id: 1, src: "/portfolio_1.jpg", alt: "Bride and groom first dance", category: "ceremony" },
-    { id: 2, src: "/portfolio_2.jpg", alt: "Wedding rings detail", category: "details" },
-    { id: 3, src: "/portfolio_3.JPG", alt: "Couple portrait in nature", category: "portraits" },
-    { id: 4, src: "/portfolio_4.JPG", alt: "Wedding ceremony kiss", category: "ceremony" },
-    { id: 5, src: "/portfolio_5.jpg", alt: "Bridal bouquet details", category: "details" },
-    { id: 6, src: "/portfolio_6.jpg", alt: "Romantic couple embrace", category: "portraits" }
-  ];
+  
 
   return (
     <section id="portfolio" className="py-20 bg-white">
@@ -42,6 +36,7 @@ const PortfolioGallery = () => {
               <img
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
