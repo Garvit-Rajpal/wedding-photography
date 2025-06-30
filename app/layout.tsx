@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "Wedding Enquiry App",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <TooltipProvider>
             <Toaster />
             <Sonner />
+            <ScrollToTop />
             <main className="">{children}</main>
           </TooltipProvider>
         </ReactQueryProvider>

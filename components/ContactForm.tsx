@@ -138,6 +138,7 @@ export default function ContactForm({ isHomePage = false }) {
                   id="phone"
                   name="phone"
                   type="tel"
+                  required
                   value={formData.phone}
                   onChange={handleChange}
                   className="mt-1"
@@ -150,6 +151,7 @@ export default function ContactForm({ isHomePage = false }) {
                   id="eventDate"
                   name="eventDate"
                   type="date"
+                  required
                   value={formData.eventDate}
                   onChange={handleChange}
                   className="mt-1"
