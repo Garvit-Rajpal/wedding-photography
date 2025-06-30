@@ -19,27 +19,27 @@ const Footer = () => {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/eternalmomentsphoto",
+      url: "https://www.instagram.com/vasundhara_photo_studio?igsh=dDNvNDh2Ymo4Y3lm&utm_source=qr",
       color: "hover:text-pink-500",
     },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      url: "https://twitter.com/eternalmomentsphoto",
-      color: "hover:text-blue-400",
-    },
-    {
-      name: "Youtube",
-      icon: Youtube,
-      url: "https://youtube.com/@eternalmomentsphoto",
-      color: "hover:text-red-500",
-    },
-    {
-      name: "LinkedIn",
-      icon: Linkedin,
-      url: "https://linkedin.com/company/eternal-moments-photography",
-      color: "hover:text-blue-600",
-    },
+    // {
+    //   name: "Twitter",
+    //   icon: Twitter,
+    //   url: "https://twitter.com/eternalmomentsphoto",
+    //   color: "hover:text-blue-400",
+    // },
+    // {
+    //   name: "Youtube",
+    //   icon: Youtube,
+    //   url: "https://youtube.com/@eternalmomentsphoto",
+    //   color: "hover:text-red-500",
+    // },
+    // {
+    //   name: "LinkedIn",
+    //   icon: Linkedin,
+    //   url: "https://linkedin.com/company/eternal-moments-photography",
+    //   color: "hover:text-blue-600",
+    // },
   ];
 
   const quickLinks = [
@@ -111,7 +111,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-serif text-lg font-semibold mb-4 text-wedding-gold">
-              Follow Us
+              Follow Us On Instagram
             </h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
