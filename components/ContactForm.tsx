@@ -133,7 +133,7 @@ export default function ContactForm({ isHomePage = false }) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <Label htmlFor="phone">Phone Number</Label>
+                <Label htmlFor="phone">Phone Number *</Label>
                 <Input
                   id="phone"
                   name="phone"
@@ -146,7 +146,7 @@ export default function ContactForm({ isHomePage = false }) {
               </div>
 
               <div>
-                <Label htmlFor="eventDate">Event Date</Label>
+                <Label htmlFor="eventDate">Event Date *</Label>
                 <Input
                   id="eventDate"
                   name="eventDate"
