@@ -123,7 +123,7 @@ const Footer = () => {
                   className={`text-gray-300 transition-colors ${social.color}`}
                   aria-label={`Follow us on ${social.name}`}
                 >
-                  <social.icon className="h-6 w-6" />
+                  <social.icon className="h-8 w-8" />
                 </a>
               ))}
             </div>
